@@ -1,0 +1,43 @@
+.create {
+    position: absolute;
+    background: #ccc;
+    border-radius: 50px;
+    width: 290px;
+    color: white;
+    padding: 15px;
+    top: 725px;
+    left: 460px;
+}
+.createButt{
+    background-color: white;
+    border-color: white;
+    height: 40px;
+    border-radius: 50px;
+    transition-duration: 1s;
+}
+.createButt:hover{
+    transform: scale(1.1);
+}
+.form-con{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    color: black;
+    top: 1500px;
+    left: 500px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+}
+.inp-field{
+    height: 25px;
+    border-radius: 10px;
+    width: 295px;
+    border-color: transparent;
+}
+.comm-butt{
+    width: 100px;
+    height: 25px;
+    border-radius: 20px;
+    margin-left: 100px;
+}

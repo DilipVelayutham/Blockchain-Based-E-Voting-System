@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - Poll Booth</title>
+    <link rel="icon" type="image/png" href="Poll.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="community.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Home.js"></script>
+    <script src="community.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="container"></div>
+        <div class="container2"></div>
+        <div style="position:absolute; top:1200px;"><p>.</p></div>
+        <nav class="navbar" id="nav">
+            <ul class="nav-links">
+                <li><a href="#live">Live Polls</a></li>
+                <li><a href="#comm">Your Communities</a></li>
+                <li><a href="#create">Create or Join Community</a></li>
+            </ul>
+        </nav>
+
+        <div class="con1">
+            <div class="menu" id="menubox">
+                <center>
+                <table class="menu-links">
+                    <tr><td><a href="Home.html">Dashboard</a></td></tr>
+                    <tr><td><hr></td></tr>
+                    <tr><td><a href="#community" style="color: grey">Community</a></td></tr>
+                    <tr><td><hr></td></tr>
+                    <tr><td><a href="results.html">Results</a></td></tr>
+                    <tr><td><hr></td></tr>
+                    <tr><td><a href="history.html">History</a></td></tr>
+                </table>
+                </center>
+            </div>
+        </div>
+        <div class="con2" id="con2">
+            <input type="text" class="search-box" id="searchBox" placeholder="Type to search...">
+            <div class="profile" id="profile">
+                <img class="profileimg1" src="dp.jpeg">
+                <h3 style="position:fixed; top:270px; left:305px;">Dilip Velayutham</h3>
+                <hr style="position:fixed; top:327px; left:287px; width:200px;"></hr>
+            </div>
+        </div>
+        <div class="cirbar" onmouseover="display()" onmouseout="undisplay()" id="cb"></div>
+        <button class="abtus" id="abtus" onmouseover="display()" onclick="aboutus()"><i style="position: absolute; left:5px; top:5px;"class="fa fa-info-circle"></i></button>
+        <button class="help" id="help" onmouseover="display()"><i style="position: absolute; left:5px; top:5px;"class="fa fa-question-circle"></i></button>
+        <button class="sett" id="sett" onmouseover="display()"><i style="position: absolute; left:5px; top:5px;"class="fa fa-cog"></i></button>
+        </div>
+
+        <button onclick="document.location='Home.html'" class="homebutt" title="Home"><i class="fa fa-home"></button>
+        <button onclick="toggleMenu()" class="elebutt" id = "menu" title="Menu"><i class="fa fa-bars"></i></button>
+        <button onclick="window.close()" class="othbutt" title="Quit"><i class="fa fa-close"></i></button>
+        <button class="navbutt" title="Navigation Bar" onclick="toggleNav()" id="nb"></button>
+        <button onclick="toggleSearch()" class="searchbutt" id="sb" title="Search"><i class="fa fa-search"></i></button>
+        <button onclick="toggleProfile()" class="profilebutt" id="pb" title="Profile"><i class="fa fa-user"></i></button>
+        <button class=><img class="profileimg" src="Poll.png"></button>
+    </nav>
+    <section>
+        <h1 class="greet">Community</h1>
+        <div id="live">
+            <h3 class="subtitles" style="top:200px; left: 460px;">Live Polls</h3>
+            <h4 class="subtitles" style="top:300px; left: 460px; font-size: 20px; font-weight: 100;">--- No Community Polls right now ---</h4>
+        </div>
+
+        <h3 class="subtitles" style="top:400px; left: 460px;" id="comm">Your Communities</h3>
+        <h4 class="subtitles" style="top:500px; left: 460px; font-size: 20px; font-weight: 100;" id="samp">--- No Communities yet ---</h4>
+        <div class="events-container" style="top: 530px;">
+            
+        </div>
+
+        <h3 class="subtitles" style="top: 600px; left: 460px; display: none;" id="create">New Community</h3>
+        <div class="create" id="cr">
+            &nbsp;&nbsp;&nbsp;
+            <input type="button" class="createButt" onclick="searchCommunity()" value="Join Community" id="jc"></input>&nbsp;&nbsp;&nbsp;
+            <input type="button" class="createButt" onclick="showCreateForm()" value="Create Community" id="cc"></input>
+            <div style="display: none" id="form-con">
+                <br><hr><br>
+                    <input class="inp-field" type="text" id="name" placeholder="Community Name" required><br><br>
+                    <textarea class="inp-field" id="desc" placeholder="Description" required></textarea><br><br>
+                    <input class="comm-butt" type="button" value="Create" id="submitt" onclick="createCommunity()"><br><br>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

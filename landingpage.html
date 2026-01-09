@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Booth</title>
+    <link rel="stylesheet" href="landingpage.css">
+    <script src="landing.js"></script>
+</head>
+<body>
+
+    <!-- Landing Page -->
+    <nav class="navbar" id="nav">
+        <div class="logo">Poll Booth</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="voterlogin.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="landing" id="home">
+        <div class="nav"></div>
+        <div class="overlay"></div>
+        <img src="landingbg.jpg" alt="Poll Booth" class="landing-image">
+        <h1 class="landing-text">Welcome to</h1>
+        <h1 class="landing-text2">Poll Booth...</h1>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us scroll-animation">
+        <h2 id="about">About Us</h2>
+        <p>Poll Booth is a secure and transparent online voting system based on blockchain technology. We ensure fair and tamper-proof elections.</p>
+    </section>
+    
+    <section class="about-us scroll-animation" id="features">
+    <h2>Key Features</h2>
+    <div class="features-container">
+      <div class="feature-card">
+        <div class="step-number">1</div>
+        <h3>Blockchain Security</h3>
+        <p>All votes are immutably recorded on a decentralized ledger — preventing tampering and providing full auditability.</p>
+      </div>
+      <div class="feature-card">
+        <div class="step-number">2</div>
+        <h3>Zero-Knowledge Privacy</h3>
+        <p>Verify vote validity without revealing voter identities with zk-proofs — privacy-first voting at scale.</p>
+      </div>
+      <div class="feature-card">
+        <div class="step-number">3</div>
+        <h3>Fast & Verifiable</h3>
+        <p>Quick vote submission with real-time verification and transparent result publication for auditors.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us scroll-animation" id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Register Securely</h4>
+        <p>Voters register using verified credentials; each identity is unique and authorized for the specific election.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Verify Anonymously</h4>
+        <p>Smart contracts validate eligibility; zero-knowledge proofs keep personal data private while proving authenticity.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Cast Your Vote</h4>
+        <p>Submit your encrypted vote — recorded immutably and available for transparent verification by auditors.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us scroll-animation" id="testimonials">
+    <h2>What People Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>“Poll Booth ensured our campus election was fair and completely verifiable. The team made deployment easy.”</p>
+        <h5>- Election Officer, University</h5>
+      </div>
+      <div class="testimonial-card">
+        <p>“I was worried about privacy with online voting — zk-proofs meant my vote stayed private while still being validated.”</p>
+        <h5>- Registered Voter</h5>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us scroll-animation" id="cta">
+    <div class="card centered">
+      <h2>Be Part of the Future of Democracy</h2>
+      <p>Try Poll Booth in a demo environment or contact us to discuss deployment for your organization.</p>
+      <div class="cta-actions">
+        <a class="btn primary" href="#contact">Request Demo</a>
+        <a class="btn outline" href="voterlogin.html">Sign In</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us scroll-animation" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-grid">
+      <div class="contact-info card">
+        <h4>Reach out</h4>
+        <p>Have questions or want to pilot Poll Booth? We’d love to talk about secure, verifiable elections for your organization.</p>
+        <p><strong>Email:</strong> contact@pollbooth.example</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+      </div>
+
+      <form class="contact-form card" id="contactForm">
+        <label>
+          <span>Your name</span>
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          <span>Your email</span>
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2025 Poll Booth. All rights reserved.</p>
+      <div class="social">
+        <a href="#">LinkedIn</a> · <a href="#">GitHub</a> · <a href="#">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

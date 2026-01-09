@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password - Poll Booth</title>
+    <link rel="stylesheet" href="forgetpass.css">
+    <script defer src="forgetpass.js"></script>
+</head>
+<body>
+    <img class="bgimg" src="finalfpbg.png">
+    <h1 style="color: grey; position: absolute; top: 100px; left: 150px;">Get your Password here...</h1>
+    <div class="form-con">
+        <center>
+            <input style="top: 50px; left:60px;" class="form-butt" type="text" id="un" placeholder="Your Username "/><br>
+            <input style="top: 100px; left: 60px;" class="form-butt" type="email" id="mail" placeholder="Your Email"/><br>
+            <input onclick="validate()" style="top: 160px; left: 170px;" class="form-buttt" type="button" value="Get OTP"/>
+            <div style="top: 205px; left: 115px;" class="otp-input">
+                <input type="text" class="otp-input__field" id="one" maxlength="1" placeholder="O" disabled/>
+                <input type="text" class="otp-input__field" id="two" maxlength="1" placeholder="T" disabled/>
+                <input type="text" class="otp-input__field" id="three" maxlength="1" placeholder="P" disabled/>
+                <input type="text" class="otp-input__field" id="four" maxlength="1" placeholder="?" disabled/>
+            </div>
+            <input onclick="getPass()" style="top: 275px; left: 150px;" class="form-buttt" type="button" value="Get Password!"/>
+        </center>
+    </div>
+    <div class="con-mes">
+        <p>Your Password was changed and sent to your email. Check it and change it later!</p>
+    </div>
+</body>
+</html>

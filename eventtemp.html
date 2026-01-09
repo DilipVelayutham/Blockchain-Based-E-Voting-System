@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Voting Event</title>
+  <link rel="stylesheet" href="eventtemp.css">
+</head>
+<body>
+
+<nav class="breadcrumbs">
+  <a href="javascript:history.back()">← Back to Community</a>
+</nav>
+
+<main class="event-wrap">
+  <div class="event-card">
+    <img id="event-img" class="event-img" />
+
+    <div class="event-content">
+      <h1 id="event-title">Event Title</h1>
+      <p id="event-desc">Event description</p>
+
+      <div class="event-meta">
+        <span id="event-end">Ends: —</span>
+      </div>
+
+      <hr/>
+
+      <div id="vote-area">
+        <h3>Cast your vote</h3>
+        <form id="vote-form"></form>
+        <button id="vote-btn" class="btn-primary">Submit Vote</button>
+      </div>
+
+      <div id="result-area" class="hidden">
+        <h3>Results</h3>
+        <div id="results"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="eventtemp.js"></script>
+</body>
+</html>

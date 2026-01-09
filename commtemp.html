@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Community Template</title>
+  <link rel="stylesheet" href="commtemp.css">
+</head>
+<body>
+  <nav class="breadcrumbs">
+    <a class="crumb" href="community.html">← Back to Communities</a>
+    <span class="sep">/</span>
+    <span class="crumb-current" id="crumb-current">Community</span>
+  </nav>
+
+  <header class="cover">
+    <img src="comm.jpg" alt="Cover" class="tempimg" />
+    <div class="cover-overlay">
+      <h1 id="header" class="community-title">Community</h1>
+      <p id="cover-sub" class="cover-sub">Community tagline or short description</p>
+    </div>
+  </header>
+
+  <main class="main-grid">
+    <aside class="info-panel" aria-label="Community information">
+      <div class="info-card">
+        <h2 class="info-name" id="info-name">Community Name</h2>
+        <p class="info-desc" id="info-desc">Community description will appear here.</p>
+
+        <ul class="info-meta">
+          <li><strong id="info-members">0</strong> members</li>
+          <li>Created: <span id="info-created">—</span></li>
+        </ul>
+
+        <div class="info-actions">
+          <button class="btn btn-primary">Join</button>
+          <button class="btn">Share</button>
+          <!-- Create Event button -->
+          <button id="create-event-btn" class="btn" title="Create event">+ Create Event</button>
+        </div>
+
+        <hr/>
+
+        <div class="info-section">
+          <h3>Pinned</h3>
+          <div id="left-pinned" class="left-pinned"></div>
+        </div>
+        <hr/>
+        <div class="info-section">
+          <h3>About</h3>
+          <p class="small">This panel holds community rules, pins and short info.</p>
+        </div>
+      </div>
+    </aside>
+
+    <section class="chat-panel" aria-label="Chat area">
+      <div class="chat-inner">
+        <div class="chat-header">
+          <div class="chat-header-left">
+            <div class="avatar" id="chat-avatar">CB</div>
+            <div>
+              <div class="chat-title" id="chat-title">Community Chat</div>
+              <div class="chat-sub" id="chat-sub">Active members • pinned messages above</div>
+            </div>
+          </div>
+          <div class="chat-header-actions">
+            <button class="icon-btn" title="Search">🔍</button>
+            <button class="icon-btn" title="More">⋮</button>
+          </div>
+        </div>
+
+        <div class="pinned-bar" id="pinned-bar">
+          <div class="pinned-title">Pinned</div>
+          <div id="pinned-list" class="pinned-list"></div>
+        </div>
+
+        <div class="chat-body" id="chat-body" role="log" aria-live="polite">
+          <!-- messages and event cards will be injected here -->
+        </div>
+
+        <form id="chat-form" class="chat-input" autocomplete="off" enctype="multipart/form-data">
+          <label class="attach-wrap" title="Attach file">
+            📎
+            <input id="attach-input" type="file" accept="image/*,audio/*,video/*,application/*" />
+          </label>
+          <input id="msg-input" type="text" placeholder="Message community..." />
+          <button id="send-btn" type="submit" class="send-btn">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Event modal (hidden by default) -->
+  <div id="event-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <header class="modal-header">
+        <h3 id="modal-title">Create Poll Event</h3>
+        <button id="modal-close" class="modal-close" title="Close">✕</button>
+      </header>
+
+      <form id="event-form" class="modal-body">
+        <label>Event Title
+          <input id="event-title" type="text" required placeholder="e.g., Best Programming Language">
+        </label>
+
+        <label>Short Description
+          <textarea id="event-desc" rows="3" placeholder="A short description of the poll"></textarea>
+        </label>
+
+        <label>Options (comma separated)
+          <input id="event-options" type="text" placeholder="Option A, Option B, Option C" required>
+        </label>
+
+        <label>End date (optional)
+          <input id="event-end" type="date" />
+        </label>
+
+        <label>Event image (optional)
+          <input id="event-image" type="file" accept="image/*" />
+          <img id="event-image-preview" class="event-image-preview" src="" alt="" style="display:none;">
+        </label>
+
+        <div class="modal-actions">
+          <button type="button" id="modal-cancel" class="btn">Cancel</button>
+          <button type="submit" id="modal-submit" class="btn btn-primary">Create Event</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="commtemp.js"></script>
+</body>
+</html>

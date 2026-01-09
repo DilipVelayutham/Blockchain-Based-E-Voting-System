@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="voterlogin.css" />
+
+    <script defer src="voterlogin.js"></script>
+    <title>Voter Login</title>
+  </head>
+  <body>
+    <div class="loader-container" id="load">
+      <div class="loader"></div>
+      <div class="checkmark"></div>
+      <div class="success" id="suc"><center><p>You've joined Poll Booth Community Successfully!</p></center></div>
+  </div>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form>
+          <h1>Sign Up</h1><br>
+          <input type="text" id="username" placeholder="Create Username" required/>
+          <input type="password" id="fpass" placeholder="Create Password" required/>
+          <input type="password" id="npass" placeholder="Re-enter Password" required/>
+          <input type="email" id="email" placeholder="Enter Email" required/>
+          <button type="button" onclick="verifyAdmin()">Join</button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form>
+          <h1>Voter Login</h1><br>
+          <input type="text" id="un" placeholder="Username" required/>
+          <input type="password" id="p" placeholder="Password" required/>
+          <a href="forgetpass.html" class="fp">Forget Password</a>
+          <button type="button" onclick="document.location='Home.html'" >Login</button>
+        </form>
+      
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Are you back?</h1><br>
+            <p><center>Already a user, please login and check your Dashboard</center></p>
+            <button class="hidden" id="login">Login</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>New User?</h1>
+            <p><center>
+              Enter into world which values your opinion
+              </center>
+            </p><br><br>
+            <button class="hidden" id="register">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

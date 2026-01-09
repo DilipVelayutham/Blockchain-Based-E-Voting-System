@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Poll Booth</title>
+    <link rel="icon" type="image/png" href="Poll.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Home.js"></script>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container2"></div>
+    <nav>
+        <nav class="navbar" id="nav">
+            <ul class="nav-links">
+                <li><a href="#ongoingevents">Active Polls</a></li>
+                <li><a href="#publicevents">Public Events</a></li>
+            </ul>
+        </nav>
+
+        <div class="con1">
+            <div class="menu" id="menubox">
+                <center>
+                <table class="menu-links">
+                    <tr><td><a href="#dash" style="color: grey">Dashboard</a></td></tr>
+                    <tr><td><hr></td></tr>
+                    <tr><td><a href="community.html">Community</a></td></tr>
+                    <tr><td><hr></td></tr>
+                    <tr><td><a href="results.html">Results</a></td></tr>
+                    <tr><td><hr></td></tr>
+                    <tr><td><a href="history.html">History</a></td></tr>
+                </table>
+                </center>
+            </div>
+        </div>
+        <div class="con2" id="con2">
+            <input type="text" class="search-box" id="searchBox" placeholder="Type to search...">
+            <div class="profile" id="profile">
+                <img class="profileimg1" src="dp.jpeg">
+                <h3 style="position:fixed; top:270px; left:305px;">Dilip Velayutham</h3>
+                <hr style="position:fixed; top:327px; left:287px; width:200px;"></hr>
+            </div>
+        </div>
+        <div class="cirbar" onmouseover="display()" onmouseout="undisplay()" id="cb"></div>
+        <button class="abtus" id="abtus" onmouseover="display()" onclick="aboutus()"><i style="position: absolute; left:5px; top:5px;"class="fa fa-info-circle"></i></button>
+        <button class="help" id="help" onmouseover="display()"><i style="position: absolute; left:5px; top:5px;"class="fa fa-question-circle"></i></button>
+        <button class="sett" id="sett" onmouseover="display()"><i style="position: absolute; left:5px; top:5px;"class="fa fa-cog"></i></button>
+
+        <button onclick="document.location='Home.html'" class="homebutt" title="Home"><i class="fa fa-home"></button>
+        <button onclick="toggleMenu()" class="elebutt" id = "menu" title="Menu"><i class="fa fa-bars"></i></button>
+        <button onclick="logout()" class="othbutt" title="Logout">
+            <i class="fa fa-close"></i>
+        </button>
+        <button class="navbutt" title="Navigation Bar" onclick="toggleNav()" id="nb"></button>
+        <button onclick="toggleSearch()" class="searchbutt" id="sb" title="Search"><i class="fa fa-search"></i></button>
+        <button onclick="toggleProfile()" class="profilebutt" id="pb" title="Profile"><i class="fa fa-user"></i></button>
+        <button class=><img class="profileimg" src="Poll.png"></button>
+    </nav>
+    
+    <section>
+        <h1 class="greet">Welcome Dilip Velayutham!</h1>
+        <div id="ongoingevents">
+            <h3 class="subtitles" style="top:200px; left: 460px;">Active Polls</h3>
+            <h4 class="subtitles" style="top:300px; left: 460px; font-size: 20px; font-weight: 100;">--- No Active Polls right now ---</h4>
+        </div>
+        <div id="publicevents">
+            <h3 class="subtitles" style="top:400px; left: 460px;">Public events</h3>
+            <h4 class="subtitles" style="top:500px; left: 460px; font-size: 20px; font-weight: 100;">--- You didn't register your voter i'd yet ---</h4>
+        </div>
+    </section>
+
+</body>
+</html>
