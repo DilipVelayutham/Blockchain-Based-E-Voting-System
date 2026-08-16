@@ -1,5 +1,5 @@
 // community.js
-// Version: add navigation to commtemp.html and render community title there
+// Version: add navigation to community-chat.html and render community title there
 const STORAGE_KEY = "pollbooth_communities_v1";
 
 let communities = [];
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Load communities into memory (used both on main page and on commtemp page)
     loadCommunitiesFromStorage();
 
-    // If this is the community template page (commtemp.html), render the header there
+    // If this is the community template page (community-chat.html), render the header there
     if (isOnTemplatePage()) {
         renderTemplateHeaderFromQuery();
         return; // nothing else to run on template page
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
    Page detection & template header
    --------------------------- */
 function isOnTemplatePage() {
-    // If document contains element with id 'header' and class 'tempimg' image, assume commtemp.html
+    // If document contains element with id 'header' and class 'tempimg' image, assume community-chat.html
     return !!document.getElementById("header") && !!document.querySelector(".tempimg");
 }
 
@@ -64,7 +64,7 @@ function renderTemplateHeaderFromQuery() {
 
     headerEl.textContent = comm.Name || "Community";
 
-    // keep existing image (commtemp.html already has comm.jpg). We do not alter image here,
+    // keep existing image (community-chat.html already has comm.jpg). We do not alter image here,
     // because your instruction said to ignore the image-insertion change.
     // If you later want the community-specific cover image to show, we can add it here.
 }
@@ -155,12 +155,12 @@ function renderCommunity(comm) {
         const clickedOnMenu = ev.target.closest(".comm-dots") || ev.target.closest(".comm-dropdown");
         if (clickedOnMenu) return;
         // go to template page with id param
-        window.location.href = `commtemp.html?id=${encodeURIComponent(comm.id)}`;
+        window.location.href = `community-chat.html?id=${encodeURIComponent(comm.id)}`;
     });
 
     communityCard.innerHTML = `
         <div class="event-info">
-            <img src="comm.jpg" alt="Event Image" onclick="window.location.href='commtemp.html?id=${encodeURIComponent(comm.id)}'">
+            <img src="assets/images/comm.jpg" alt="Event Image" onclick="window.location.href='community-chat.html?id=${encodeURIComponent(comm.id)}'">
             <div class="event-title">${escapeHtml(comm.Name)}</div>
             <div class="event-description">${escapeHtml(comm.Desc)}</div>
         </div>

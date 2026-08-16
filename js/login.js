@@ -77,7 +77,7 @@ function verifyAdmin(){
       npassele.style.border = "";
   }
 
-    window.location = "landingpage.html";
+    window.location = "index.html";
     return true;
   
 }
@@ -117,6 +117,6 @@ if (fpval === "") {
   fpele.style.border = "";
 }
 
-window.location = "Home.html";
+window.location = "home.html";
 return true;
 }

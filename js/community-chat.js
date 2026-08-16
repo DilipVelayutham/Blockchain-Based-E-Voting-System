@@ -1,9 +1,9 @@
-/* commtemp.js
+/* community-chat.js
    - Reads community id from query param `id`
    - Loads community info from localStorage key "pollbooth_communities_v1"
    - Implements chat UI + create-event modal
    - Events stored in localStorage under key "pollbooth_events_v1"
-   - Event notifications are injected into chat as large event-cards that link to eventtemp.html
+   - Event notifications are injected into chat as large event-cards that link to event.html
 */
 
 // storage keys
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch(e){}
     } else {
       // fallback template image (you said you'll include event template image)
-      imgDataUrl = "event.jpg"; // keep a default reference (ensure file exists)
+      imgDataUrl = "assets/images/event.jpg"; // keep a default reference (ensure file exists)
     }
 
     const id = genId();
@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
     wrapper.title = "Open event";
 
     // image: either data URL or fallback path
-    const imgSrc = ev.image || "event.jpg";
+    const imgSrc = ev.image || "assets/images/event.jpg";
 
     const html = `
       <img src="${imgSrc}" alt="event image"/>
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // clicking card or open button -> navigate to event page
     wrapper.addEventListener("click", (e) => {
       // avoid double-trigger if button clicked (still navigate)
-      window.location.href = `eventtemp.html?event=${encodeURIComponent(ev.id)}&comm=${encodeURIComponent(ev.commId)}`;
+      window.location.href = `event.html?event=${encodeURIComponent(ev.id)}&comm=${encodeURIComponent(ev.commId)}`;
     });
 
     return wrapper;

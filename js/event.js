@@ -32,7 +32,7 @@ function init(){
 
   titleEl.textContent = eventObj.title;
   descEl.textContent = eventObj.desc || "";
-  imgEl.src = eventObj.image || "event.jpg";
+  imgEl.src = eventObj.image || "assets/images/event.jpg";
   endEl.textContent = "Ends: " + (eventObj.endDate ? new Date(eventObj.endDate).toDateString() : "—");
 
   renderOptions();

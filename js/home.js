@@ -119,7 +119,7 @@ function setMedia() {
 }
 function logout() {
     localStorage.removeItem("loggedInUser");
-    window.location.href = "landingpage.html";
+    window.location.href = "index.html";
 }
 setMedia();
 window.addEventListener("resize", setMedia);
